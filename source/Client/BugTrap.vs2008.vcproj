@@ -73,7 +73,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibSD.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="2"
 				ModuleDefinitionFile="BugTrap.def"
 				GenerateDebugInformation="true"
@@ -166,7 +166,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibSD.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="2"
 				ModuleDefinitionFile=""
 				GenerateDebugInformation="true"
@@ -259,7 +259,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibS.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="1"
 				ModuleDefinitionFile="BugTrap.def"
 				GenerateDebugInformation="true"
@@ -355,7 +355,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibS.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="1"
 				ModuleDefinitionFile=""
 				GenerateDebugInformation="true"
@@ -449,7 +449,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibSD.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="2"
 				ModuleDefinitionFile="BugTrap.def"
 				GenerateDebugInformation="true"
@@ -542,7 +542,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibSD.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="2"
 				ModuleDefinitionFile=""
 				GenerateDebugInformation="true"
@@ -635,7 +635,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibS.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="1"
 				ModuleDefinitionFile="BugTrap.def"
 				GenerateDebugInformation="true"
@@ -731,7 +731,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibS.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="1"
 				ModuleDefinitionFile=""
 				GenerateDebugInformation="true"
@@ -826,7 +826,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibMSD.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="2"
 				ModuleDefinitionFile="BugTrap.def"
 				GenerateDebugInformation="true"
@@ -922,7 +922,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibMSD.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="2"
 				ModuleDefinitionFile=""
 				GenerateDebugInformation="true"
@@ -1018,7 +1018,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibMS.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="1"
 				ModuleDefinitionFile="BugTrap.def"
 				GenerateDebugInformation="true"
@@ -1116,7 +1116,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
+				AdditionalDependencies="zlibMS.lib ws2_32.lib comctl32.lib shlwapi.lib version.lib wininet.lib nothrownew.obj"
 				LinkIncremental="1"
 				ModuleDefinitionFile=""
 				GenerateDebugInformation="true"

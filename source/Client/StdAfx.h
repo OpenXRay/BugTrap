@@ -96,35 +96,3 @@ struct _IMAGELIST { }; // unresolved typeref token
 #endif
 
 #define countof(array) (sizeof(array) / sizeof((array)[0]))
-
-#if defined _M_IX86
- #ifdef _MANAGED
-  #ifdef _DEBUG
-   #pragma comment(lib, "zlibMSD.lib")
-  #else
-   #pragma comment(lib, "zlibMS.lib")
-  #endif
- #else
-  #ifdef _DEBUG
-   #pragma comment(lib, "zlibSD.lib")
-  #else
-   #pragma comment(lib, "zlibS.lib")
-  #endif
- #endif
-#elif defined _M_X64
- #ifdef _MANAGED
-  #ifdef _DEBUG
-   #pragma comment(lib, "zlibMSD-x64.lib")
-  #else
-   #pragma comment(lib, "zlibMS-x64.lib")
-  #endif
- #else
-  #ifdef _DEBUG
-   #pragma comment(lib, "zlibSD-x64.lib")
-  #else
-   #pragma comment(lib, "zlibS-x64.lib")
-  #endif
- #endif
-#else
- #error CPU architecture is not supported.
-#endif
