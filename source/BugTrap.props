@@ -15,65 +15,22 @@
     <IntDir>$(ProjectDir)..\..\intermediate\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='.NET Debug|Win32'">
-    <TargetName>$(ProjectName)DN</TargetName>
+  <PropertyGroup Label="UserMacros">
+    <BugTrapUnicode></BugTrapUnicode>
+    <BugTrapDebug></BugTrapDebug>
+    <BugTrapNet></BugTrapNet>
+    <BugTrapStatic></BugTrapStatic>
+    <BugTrapArch></BugTrapArch>
+
+    <BugTrapUnicode Condition="$(Configuration.Contains('Unicode'))">U</BugTrapUnicode>
+    <BugTrapDebug Condition="$(Configuration.Contains('Debug'))">D</BugTrapDebug>
+    <BugTrapNet Condition="$(Configuration.Contains('.NET'))">N</BugTrapNet>
+    <BugTrapStatic Condition="$(Configuration.Contains('Static'))">S</BugTrapStatic>
+    <BugTrapArch Condition="'$(Platform)'!='Win32'">-$(PlatformShortName)</BugTrapArch>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='.NET Debug|x64'">
-    <TargetName>$(ProjectName)DN-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='.NET Release|Win32'">
-    <TargetName>$(ProjectName)N</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='.NET Release|x64'">
-    <TargetName>$(ProjectName)N-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>$(ProjectName)D</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>$(ProjectName)D-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>$(ProjectName)</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>$(ProjectName)-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">
-    <TargetName>$(ProjectName)DS</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|x64'">
-    <TargetName>$(ProjectName)DS-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
-    <TargetName>$(ProjectName)S</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|x64'">
-    <TargetName>$(ProjectName)S-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'">
-    <TargetName>$(ProjectName)UD-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'">
-    <TargetName>$(ProjectName)U-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
-    <TargetName>$(ProjectName)UD</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
-    <TargetName>$(ProjectName)U</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug Static|x64'">
-    <TargetName>$(ProjectName)UDS-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release Static|x64'">
-    <TargetName>$(ProjectName)US-x64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug Static|Win32'">
-    <TargetName>$(ProjectName)UDS</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release Static|Win32'">
-    <TargetName>$(ProjectName)US</TargetName>
+
+  <PropertyGroup>
+    <TargetName>$(ProjectName)$(BugTrapUnicode)$(BugTrapDebug)$(BugTrapNet)$(BugTrapStatic)$(BugTrapArch)</TargetName>
   </PropertyGroup>
 
   <ItemDefinitionGroup>
