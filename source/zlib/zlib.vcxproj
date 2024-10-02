@@ -357,7 +357,10 @@
     <ClCompile Include="src\compress.c" />
     <ClCompile Include="src\crc32.c" />
     <ClCompile Include="src\deflate.c" />
-    <ClCompile Include="src\gzio.c" />
+    <ClCompile Include="src\gzclose.c" />
+    <ClCompile Include="src\gzlib.c" />
+    <ClCompile Include="src\gzread.c" />
+    <ClCompile Include="src\gzwrite.c" />
     <ClCompile Include="src\infback.c" />
     <ClCompile Include="src\inffast.c" />
     <ClCompile Include="src\inflate.c" />
@@ -378,6 +381,7 @@
     <ClInclude Include="include\crc32.h" />
     <ClInclude Include="include\crypt.h" />
     <ClInclude Include="include\deflate.h" />
+    <ClInclude Include="include\gzguts.h" />
     <ClInclude Include="include\inffast.h" />
     <ClInclude Include="include\inffixed.h" />
     <ClInclude Include="include\inflate.h" />
@@ -388,7 +392,6 @@
     <ClInclude Include="include\trees.h" />
     <ClInclude Include="include\unzip.h" />
     <ClInclude Include="include\zconf.h" />
-    <ClInclude Include="include\zconf.in.h" />
     <ClInclude Include="include\zip.h" />
     <ClInclude Include="include\zlib.h" />
     <ClInclude Include="include\zutil.h" />

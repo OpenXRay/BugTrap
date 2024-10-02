@@ -23,7 +23,16 @@
     <ClCompile Include="src\deflate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gzio.c">
+    <ClCompile Include="src\gzclose.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gzlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gzread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gzwrite.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\infback.c">
@@ -78,6 +87,9 @@
     <ClInclude Include="include\deflate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\gzguts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\inffast.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -106,9 +118,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\zconf.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\zconf.in.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\zip.h">
