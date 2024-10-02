@@ -481,4 +481,7 @@
       <Filter>Accessories\Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Condition="exists('$(WindowsSdkDir)Debuggers\$(PlatformShortName)\dbghelp.dll')" Include="$(WindowsSdkDir)Debuggers\$(PlatformShortName)\dbghelp.dll" />
+  </ItemGroup>
 </Project>

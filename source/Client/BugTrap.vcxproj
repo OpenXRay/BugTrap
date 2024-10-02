@@ -180,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BugTrap.def" />
+    <CopyFileToFolders Condition="exists('$(WindowsSdkDir)Debuggers\$(PlatformShortName)\dbghelp.dll')" Include="$(WindowsSdkDir)Debuggers\$(PlatformShortName)\dbghelp.dll">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
     <None Include="res\KeyPair.snk" />
     <None Include="res\Upload.avi" />
   </ItemGroup>
