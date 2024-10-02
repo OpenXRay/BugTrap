@@ -104,6 +104,9 @@
       <UniqueIdentifier>{a02d4066-bfbf-4e9b-8148-10a58852a3d8}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
     </Filter>
+    <Filter Include="Main\Public">
+      <UniqueIdentifier>{ed16d5f6-d267-4ba2-9d97-122fd6e99126}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AboutDlg.cpp">
@@ -372,18 +375,6 @@
     <ClInclude Include="XmlLogFile.h">
       <Filter>System\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BTAtlWindow.h">
-      <Filter>Main\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BTMfcWindow.h">
-      <Filter>Main\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BTTrace.h">
-      <Filter>Main\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BugTrap.h">
-      <Filter>Main\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BugTrapNet.h">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
@@ -446,6 +437,18 @@
     </ClInclude>
     <ClInclude Include="VersionInfoString.h">
       <Filter>Accessories\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\BTAtlWindow.h">
+      <Filter>Main\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\BTMfcWindow.h">
+      <Filter>Main\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\BTTrace.h">
+      <Filter>Main\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\BugTrap.h">
+      <Filter>Main\Public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

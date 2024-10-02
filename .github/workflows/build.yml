@@ -29,6 +29,7 @@ jobs:
       with:
         name: BugTrap ${{ matrix.configuration }} ${{ matrix.platform }} (github-${{ github.run_number }})
         path: |
+            include/*
             bin/*.dll
             bin/*.lib
             bin/*.pdb
