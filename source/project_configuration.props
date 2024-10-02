@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <!--EnableUnitySupport Condition="'$(CI)'!=''">true</EnableUnitySupport-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(Configuration.Contains('Unicode'))" Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(Configuration.Contains('.NET'))" Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Globals">
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(DefaultPlatformToolset)' == 'v143' and '$(v143_Installed)' == 'true'">
+      <PropertyGroup Label="Configuration">
+        <PlatformToolset>v143</PlatformToolset>
+      </PropertyGroup>
+    </When>
+    <When Condition="'$(DefaultPlatformToolset)' == 'v142' and '$(v142_Installed)' == 'true'">
+      <PropertyGroup Label="Configuration">
+        <PlatformToolset>v142</PlatformToolset>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup Label="Configuration">
+        <PlatformToolset>v143</PlatformToolset>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+</Project>
