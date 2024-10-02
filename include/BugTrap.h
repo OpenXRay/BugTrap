@@ -29,7 +29,9 @@
  * BUGTRAP_API functions as being imported from a DLL, whereas this DLL sees symbols
  * defined with this macro as being exported.
  */
-#ifdef BUGTRAP_EXPORTS
+#ifdef BUGTRAP_STATIC
+ #define BUGTRAP_API
+#elif defined(BUGTRAP_EXPORTS)
  #define BUGTRAP_API __declspec(dllexport)
 #else
  #define BUGTRAP_API __declspec(dllimport)
