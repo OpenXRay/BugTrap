@@ -7,13 +7,13 @@ on:
 
 jobs:
   windows:
-    name: ${{ matrix.Configuration }} ${{ matrix.Platform }}
+    name: ${{ matrix.configuration }} ${{ matrix.platform }}
     runs-on: windows-latest
     strategy:
       fail-fast: false
       matrix:
-        Configuration: [.NET Debug, .NET Release, Debug, Release, Unicode Debug, Unicode Release]
-        Platform: [x64, Win32]
+        configuration: [.NET Debug, .NET Release, Debug, Release, Unicode Debug, Unicode Release]
+        platform: [x64, Win32]
     steps:
     - uses: actions/checkout@main
     - uses: microsoft/setup-msbuild@main
@@ -22,4 +22,13 @@ jobs:
       run: nuget restore source/BugTrap.sln
 
     - name: Build
-      run: msbuild /m /p:Configuration="${{ matrix.Configuration }}" /p:Platform="${{ matrix.Platform }}" source/BugTrap.sln
+      run: msbuild /m /p:Configuration="${{ matrix.configuration }}" /p:Platform="${{ matrix.platform }}" source/BugTrap.sln
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@main
+      with:
+        name: BugTrap ${{ matrix.configuration }} ${{ matrix.platform }} (github-${{ github.run_number }})
+        path: |
+            bin/*.dll
+            bin/*.lib
+            bin/*.pdb
