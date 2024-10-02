@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  windows:
+  build:
     name: ${{ matrix.configuration }} ${{ matrix.platform }}
     runs-on: windows-latest
     strategy:
@@ -39,8 +39,46 @@ jobs:
       with:
         name: BugTrap ${{ matrix.configuration }} ${{ matrix.platform }} (github-${{ github.run_number }})
         path: |
-            include/*
+            include
             bin/*.dll
             bin/*.lib
             bin/*.pdb
+            doc
             LICENSE
+
+  pack-everything:
+    name: Pack everything into one archive
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - name: Download everything from previous jobs
+        uses: actions/download-artifact@v4
+
+      - name: Unify folders
+        shell: cmd
+        run: |
+          for /d /r %%D in ("BugTrap*") do (
+              echo Moving contents of %%D to the parent directory...
+
+              rem Copy all files and directories recursively
+              xcopy "%%D\*" "${{ github.workspace }}" /E /I /K /Y
+
+              rem Delete original directory
+              rd /s /q "%%D"
+          )
+
+      - name: Show files we have
+        run: Get-ChildItem -Recurse
+
+      - name: Upload unified artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: BugTrap (github-${{ github.run_number }})
+          path: "*"
+          compression-level: 9
+
+      # XXX: to be uploaded as a release, not artifact
+      #- name: Pack shipping archive
+      #  run: |
+      #    7z a BugTrap.zip * -xr!*.pdb
+      #    7z a "BugTrap Symbols.zip" bin\*.pdb
