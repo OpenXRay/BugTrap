@@ -17,12 +17,8 @@ jobs:
           - .NET Release
           - Debug
           - Release
-          - Debug Static
-          - Release Static
           - Unicode Debug
           - Unicode Release
-          - Unicode Debug Static
-          - Unicode Release Static
         platform: [x64, Win32]
     steps:
     - uses: actions/checkout@main
