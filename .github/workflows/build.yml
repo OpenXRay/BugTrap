@@ -34,11 +34,12 @@ jobs:
       uses: actions/upload-artifact@main
       with:
         name: BugTrap ${{ matrix.configuration }} ${{ matrix.platform }} (github-${{ github.run_number }})
+        include-hidden-files: true
         path: |
             include
-            bin/*.dll
-            bin/*.lib
-            bin/*.pdb
+            bin
+            !bin/**/*.exp
+            !bin/**/*.metagen
             doc
             LICENSE
 
@@ -70,6 +71,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: BugTrap (github-${{ github.run_number }})
+          include-hidden-files: true
           path: "*"
           compression-level: 9
 

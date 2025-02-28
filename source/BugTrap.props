@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="OutputDirectories">
-    <OutDir>$(ProjectDir)..\..\bin\</OutDir>
+    <OutDir>$(ProjectDir)..\..\bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\..\intermediate\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
 
@@ -19,16 +19,14 @@
     <BugTrapUnicode></BugTrapUnicode>
     <BugTrapDebug></BugTrapDebug>
     <BugTrapNet></BugTrapNet>
-    <BugTrapArch></BugTrapArch>
 
     <BugTrapUnicode Condition="$(Configuration.Contains('Unicode'))">U</BugTrapUnicode>
     <BugTrapDebug Condition="$(Configuration.Contains('Debug'))">D</BugTrapDebug>
     <BugTrapNet Condition="$(Configuration.Contains('.NET'))">N</BugTrapNet>
-    <BugTrapArch Condition="'$(Platform)'!='Win32'">-$(PlatformShortName)</BugTrapArch>
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetName>$(ProjectName)$(BugTrapUnicode)$(BugTrapDebug)$(BugTrapNet)$(BugTrapArch)</TargetName>
+    <TargetName>$(ProjectName)$(BugTrapUnicode)$(BugTrapDebug)$(BugTrapNet)</TargetName>
   </PropertyGroup>
 
   <ItemDefinitionGroup>
