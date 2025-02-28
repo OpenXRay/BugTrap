@@ -19,18 +19,16 @@
     <BugTrapUnicode></BugTrapUnicode>
     <BugTrapDebug></BugTrapDebug>
     <BugTrapNet></BugTrapNet>
-    <BugTrapStatic></BugTrapStatic>
     <BugTrapArch></BugTrapArch>
 
     <BugTrapUnicode Condition="$(Configuration.Contains('Unicode'))">U</BugTrapUnicode>
     <BugTrapDebug Condition="$(Configuration.Contains('Debug'))">D</BugTrapDebug>
     <BugTrapNet Condition="$(Configuration.Contains('.NET'))">N</BugTrapNet>
-    <BugTrapStatic Condition="$(Configuration.Contains('Static'))">S</BugTrapStatic>
     <BugTrapArch Condition="'$(Platform)'!='Win32'">-$(PlatformShortName)</BugTrapArch>
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetName>$(ProjectName)$(BugTrapUnicode)$(BugTrapDebug)$(BugTrapNet)$(BugTrapStatic)$(BugTrapArch)</TargetName>
+    <TargetName>$(ProjectName)$(BugTrapUnicode)$(BugTrapDebug)$(BugTrapNet)$(BugTrapArch)</TargetName>
   </PropertyGroup>
 
   <ItemDefinitionGroup>

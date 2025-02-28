@@ -6,10 +6,6 @@
     <!--EnableUnitySupport Condition="'$(CI)'!=''">true</EnableUnitySupport-->
   </PropertyGroup>
 
-  <PropertyGroup Condition="$(Configuration.Contains('Static'))" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-  </PropertyGroup>
-
   <PropertyGroup Condition="$(Configuration.Contains('Unicode'))" Label="Configuration">
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
